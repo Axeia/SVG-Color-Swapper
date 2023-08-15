@@ -8,6 +8,8 @@ SVG color swapper is a utility made to change over SVG icons from one color pale
 3. Swap colors around (previewed as you do)
 4. Hit save
 
+![ss](https://i.imgur.com/2dfpUza.gif)
+
 ## Features
 * Preview your icons at common icon sizes: 16, 32, 48, 64, 128. Accessible under the shortcuts <kbd>alt</kbd>+<kbd>1</kbd> to <kbd>5</kbd>
 * Live preview of the color swap and contrast as you select the color

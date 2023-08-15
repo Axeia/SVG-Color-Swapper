@@ -573,7 +573,7 @@ class MainWindow(QMainWindow):
                 restoreOldNew = True
             
             colorDialog = QtWidgets.QColorDialog(startColor)
-            colorDialog.currentonChangeColorTreeColor.connect(self.onChangeColorTreeColor)
+            colorDialog.currentColorChanged.connect(self.onChangeColorTreeColor)
 
             result = colorDialog.exec()
 
@@ -611,8 +611,8 @@ class MainWindow(QMainWindow):
     def onChangeColorTreeColor(self, color: QColor):
         self.tree.currentItem().setText(ColIndex.NEWHEX.value, color.name())
         self.tree.currentItem().updateNewColumns()
-
         self.replaceOutputColorsWithTreeColors()
+        self.flowListOutput.repaint()
         self.tree.fakeUpdate()
 
 app = QApplication(sys.argv)
